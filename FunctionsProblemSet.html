@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions Problem Set</title>
+</head>
+<body>
+
+
+<script>
+
+    var values = [1, 2, 3, 4, 5];
+
+
+    console.log(add(values));
+
+
+    function add(array) {
+        if (array.length === 0) {
+            return 0;
+        }
+        var accumulatedtotal = 0;
+        for (var i = 0; i < array.length; i++) {
+            accumulatedtotal += array[i];
+        }
+
+        return accumulatedtotal;
+    }
+
+    var sentence = "madamimadam";
+    var sentence2 = "test";
+
+    function checkPaladrom(str) {
+        var check = str.split("").reverse().join("");
+        if (check === str) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    console.log(checkPaladrom(sentence));
+    console.log(checkPaladrom(sentence2));
+
+    var testsentence = "I am happy you are reading this sentence";
+
+    console.log(stringTool(testsentence));
+
+    function stringTool(str){
+        var stringlength =0;
+        var wordcharacterscount=0;
+
+        var stringarray =str.split(" ");
+        stringlength = stringarray.length;
+        for (var i =0; i<stringarray.length;i++)
+        {
+            var temp = stringarray[i].split("");
+            wordcharacterscount+=(temp.length);
+        }
+        return "This string has "+ stringlength +" words. The average length of each word is "+ (wordcharacterscount / stringlength) + " characters";
+    }
+
+
+
+
+</script>
+</body>
+</html>
